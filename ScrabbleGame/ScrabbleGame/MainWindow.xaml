@@ -1,0 +1,38 @@
+﻿<Window x:Class="ScrabbleGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScrabbleGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="518.093" Width="847.368">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="3" Margin="0,0,-0.2,-0.2"/>
+        <Grid Grid.ColumnSpan="3" Margin="0,0,-0.2,-0.2">
+            <Rectangle  HorizontalAlignment="Left" Height="35" Margin="292,329,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+            <Grid Background="#FFE2C6C6" Margin="0,0,1,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Canvas Margin="200,104,252.8,350"/>
+                <Label Content="Scrabble" HorizontalAlignment="Left" Margin="313,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Black"/>
+                <Button Content="Start" HorizontalAlignment="Left" Margin="352,171,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" FontSize="24" FontFamily="Segoe UI Black"/>
+                <Button Content="Score Board" HorizontalAlignment="Left" Margin="313,251,0,0" VerticalAlignment="Top" Width="171" Click="Button_Click_1" FontSize="24" FontFamily="Segoe UI Black"/>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
+
+    
+    
+    
+    
+    

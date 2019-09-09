@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrabbleGame", "ScrabbleGame\ScrabbleGame.csproj", "{8BE492BB-5E6E-48BB-8804-0D928035C59A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BE492BB-5E6E-48BB-8804-0D928035C59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE492BB-5E6E-48BB-8804-0D928035C59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE492BB-5E6E-48BB-8804-0D928035C59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE492BB-5E6E-48BB-8804-0D928035C59A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B51F69F2-5979-4E66-B8C3-AD4D983FDC80}
+	EndGlobalSection
+EndGlobal
