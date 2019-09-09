@@ -1,0 +1,17 @@
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\bin\Debug\ScrabbleGame.exe.config
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\bin\Debug\ScrabbleGame.exe
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\bin\Debug\ScrabbleGame.pdb
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.csprojAssemblyReference.cache
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\MainWindow.g.cs
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\App.g.cs
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame_MarkupCompile.cache
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame_MarkupCompile.lref
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\MainWindow.baml
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.g.resources
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.Properties.Resources.resources
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.csproj.GenerateResource.cache
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.csproj.CoreCompileInputs.cache
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.exe
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\ScrabbleGame.pdb
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\Welcome.g.cs
+C:\Users\SSengamalam\source\repos\ScrabbleGame\ScrabbleGame\obj\Debug\Welcome.baml
