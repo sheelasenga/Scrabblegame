@@ -19,9 +19,14 @@ namespace ScrabbleGame
     /// </summary>
     public partial class Welcome : Window
     {
+        string[] words;
+        public string currentword;
         public Welcome()
         {
             InitializeComponent();
+
+            words = System.IO.File.ReadAllLines("Words.txt");
+           
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -52,25 +57,59 @@ namespace ScrabbleGame
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
-        {string[] words = new string[] { "perfect", "country", "pumpkin", "freedom", "journey", "amazing" };
-            Random r = new Random();
-            // string rand = new string (words.ToString(). OrderBy(s => (r.Next(2)% 2 ) == 0).ToArray());
+        {
            
-            MessageBox.Show(words[r.Next(0, words.Length)]);
+            // string[] words = { "perfect", "country", "pumpkin", "freedom", "journey", "amazing" , "good"};
             
+           Random rnd = new Random();
+            string newword = words[rnd.Next(words.Length)];
+            char[] wordChars = newword.ToCharArray();
+            int len = wordChars.Length;
+            string random = new string(words.ToString().OrderBy(s => (rnd.Next(2) % 2) == 0).ToArray());
 
+            // display the generated word in textbox
+            wordtxt.Text = words[rnd.Next(words.Length)];
+           //wordtxt.Text = words[random.Next(0,words.Count)];
+            lengthTxt.Text = len.ToString();
 
         }
-        
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //   string[] words = { "perfect", "country", "pumpkin", "freedom", "journey", "amazing", "good" };
+            //Random rnd = new Random();
+            //string newword = words[rnd.Next(words.Length)];
             
-           // string words = wordlbl.rand;
+
+          
+           
+
 
         }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+           
+        }
+        private void setWord(int length)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                wordtxt.AppendText("_ ");
+            }
+        }
+        private void AddButtons()
+
+            {
+            for (int i = (int) 'A'; i <= (int)'Z'; i++)
+            {
+                Button b = new Button();
+                b.DataContext = ((char)i).ToString();
+               
+            }
+            }
+        }
     }
-}
+
 
 
 

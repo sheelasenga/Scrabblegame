@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Welcome" Height="450" Width="800">
     <Grid Background="#FFE2C6C6">
-        <Label Content="Scrabble" HorizontalAlignment="Left" Margin="306,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+        <Label Content="Scrabble" HorizontalAlignment="Left" Margin="306,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe Script"/>
         <Rectangle  HorizontalAlignment="Left" Height="35" Stroke="Black" VerticalAlignment="Top" Width="38" Margin="418,99,0,0"/>
         <Rectangle  HorizontalAlignment="Left" Height="35" Stroke="Black" VerticalAlignment="Top" Width="38" Margin="189,99,0,0"/>
         <Rectangle  HorizontalAlignment="Left" Height="35" Stroke="Black" VerticalAlignment="Top" Width="38" Margin="247,99,0,0"/>
@@ -41,14 +41,14 @@
         <Button x:Name="Ubtn" Content="U" HorizontalAlignment="Left" Margin="604,299,0,0" VerticalAlignment="Top" Width="34" Height="33" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="24"/>
         <Button x:Name="Ybtn" Content="Y" HorizontalAlignment="Left" Margin="425,355,0,0" VerticalAlignment="Top" Width="34" Height="33" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="24"/>
         <Button x:Name="Zbtn" Content="Z" HorizontalAlignment="Left" Margin="482,355,0,0" VerticalAlignment="Top" Width="34" Height="33" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="24" RenderTransformOrigin="5.553,0.255"/>
-        <Button Content="Generate Word" HorizontalAlignment="Left" Margin="318,193,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_3"/>
-        <Label Content="Number of Guess Left:" HorizontalAlignment="Left" Margin="151,150,0,0" VerticalAlignment="Top" Width="131"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="287,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="26" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Wrong Guess:" HorizontalAlignment="Left" Margin="318,150,0,0" VerticalAlignment="Top" Width="86"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="560,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="26" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="418,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="26" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Length of Word:" HorizontalAlignment="Left" Margin="458,150,0,0" VerticalAlignment="Top" Width="97"/>
-        <Label x:Name="wordlbl" Content="Label" HorizontalAlignment="Left" Margin="445,190,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button x:Name="wordbtn" Content="Generate Word" HorizontalAlignment="Left" Margin="315,193,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_3" FontFamily="Segoe UI Light" Height="23"/>
+        <Label Content="Number of Guess Left:" HorizontalAlignment="Left" Margin="151,150,0,0" VerticalAlignment="Top" Width="131" FontFamily="Segoe UI Light"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="282,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="31" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Wrong Guess:" HorizontalAlignment="Left" Margin="318,150,0,0" VerticalAlignment="Top" Width="86" FontFamily="Segoe UI Light"/>
+        <TextBox x:Name="lengthTxt" HorizontalAlignment="Left" Height="23" Margin="560,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="36" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="409,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Length of Word:" HorizontalAlignment="Left" Margin="458,150,0,0" VerticalAlignment="Top" Width="97" FontFamily="Segoe UI Light"/>
+        <TextBox x:Name="wordtxt" HorizontalAlignment="Left" Height="23" Margin="457,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" TextChanged="TextBox_TextChanged_1"/>
 
     </Grid>
 </Window>

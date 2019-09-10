@@ -20,8 +20,8 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Canvas Margin="200,104,252.8,350"/>
-                <Label Content="Scrabble" HorizontalAlignment="Left" Margin="313,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Black"/>
-                <Button Content="Start" HorizontalAlignment="Left" Margin="352,171,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" FontSize="24" FontFamily="Segoe UI Black"/>
+                <Label Content="Scrabble" HorizontalAlignment="Left" Margin="313,37,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe Script"/>
+                <Button Content="Start" HorizontalAlignment="Left" Margin="359,172,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" FontSize="24" FontFamily="Segoe UI Black"/>
                 <Button Content="Score Board" HorizontalAlignment="Left" Margin="313,251,0,0" VerticalAlignment="Top" Width="171" Click="Button_Click_1" FontSize="24" FontFamily="Segoe UI Black"/>
 
             </Grid>
