@@ -21,6 +21,9 @@ namespace ScrabbleGame
     {
         string[] words;
         public string currentword;
+        private int wrongGuess = 0;
+        private string copyCurrent = "";
+
         public Welcome()
         {
             InitializeComponent();
@@ -36,42 +39,29 @@ namespace ScrabbleGame
 
         }
 
-        private void Abtn_Click(object sender, RoutedEventArgs e)
+        private void generateBtn(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Fbtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-           
-            // string[] words = { "perfect", "country", "pumpkin", "freedom", "journey", "amazing" , "good"};
+           // string[] words = { "perfect", "country", "pumpkin", "freedom", "journey", "amazing" , "good"};
             
+            // random word generator
            Random rnd = new Random();
             string newword = words[rnd.Next(words.Length)];
             char[] wordChars = newword.ToCharArray();
             int len = wordChars.Length;
-            string random = new string(words.ToString().OrderBy(s => (rnd.Next(2) % 2) == 0).ToArray());
+           string random = new string(words.ToString().OrderBy(s => (rnd.Next(2) % 2) == 0).ToArray());
 
             // display the generated word in textbox
             wordtxt.Text = words[rnd.Next(words.Length)];
-           //wordtxt.Text = words[random.Next(0,words.Count)];
+            // wordtxt.Text = words[random.Next(0,words.Count)];
+            //wordtxt.Text = random;
+           // MessageBox.Show(random);
             lengthTxt.Text = len.ToString();
 
+            //hide the generated word using _
+            for (int i = 0; i < wordChars.Length; i++)
+            {
+              WordLbl.Text += ("_ ");
+            }
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -79,35 +69,59 @@ namespace ScrabbleGame
             //Random rnd = new Random();
             //string newword = words[rnd.Next(words.Length)];
             
-
-          
-           
-
-
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        private void Wordchoice()
+        {
+            wrongGuess = 0;
+            int guessIndex = (new Random()).Next(words.Length);
+            currentword = words[guessIndex];
+            copyCurrent = "";
+            for (int index = 0; index < currentword.Length; index++)
+            {
+                copyCurrent += "_";
+            }
+            displayword();
+        }
+        private void displayword()
         {
            
+            for (int index = 0; index < currentword.Length; index++)
+            {
+                WordLbl.Text += copyCurrent.Substring(index, 1);
+                WordLbl.Text += " ";
+                
+            }
         }
-        private void setWord(int length)
+        private void GuessClick(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < length; i++)
+            wrongGuess++;
+            if (wrongGuess > 7)
             {
-                wordtxt.AppendText("_ ");
+                MessageBox.Show("wrong guess, You lost");
             }
-        }
-        private void AddButtons()
+            else
+            {
+                // MessageBox.Show("You won!");
+            }
 
+            Button choice = sender as Button;
+
+            if (currentword.Equals(choice.Content))
             {
-            for (int i = (int) 'A'; i <= (int)'Z'; i++)
-            {
-                Button b = new Button();
-                b.DataContext = ((char)i).ToString();
-               
+                char[] temp = copyCurrent.ToCharArray();
+                char[] find = currentword.ToCharArray();
             }
-            }
+
+
+
         }
+
+        private void Bbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
     }
 
 
