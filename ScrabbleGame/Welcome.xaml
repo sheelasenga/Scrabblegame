@@ -34,16 +34,16 @@
         <Button x:Name="Ubtn" Content="U" HorizontalAlignment="Left" Margin="604,299,0,0" VerticalAlignment="Top" Width="34" Height="33" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="24" Click="GuessClick"/>
         <Button x:Name="Ybtn" Content="Y" HorizontalAlignment="Left" Margin="425,355,0,0" VerticalAlignment="Top" Width="34" Height="33" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="24" Click="GuessClick"/>
         <Button x:Name="Zbtn" Content="Z" HorizontalAlignment="Left" Margin="482,355,0,0" VerticalAlignment="Top" Width="34" Height="33" FontWeight="Bold" FontFamily="Segoe UI Black" FontSize="24" RenderTransformOrigin="5.553,0.255" Click="GuessClick"/>
-        <Button x:Name="wordbtn" Content="Generate Word" HorizontalAlignment="Left" Margin="315,193,0,0" VerticalAlignment="Top" Width="99" Click="generateBtn" FontFamily="Segoe UI Light" Height="23"/>
+        <Button x:Name="wordbtn" Content="Generate Word" HorizontalAlignment="Left" Margin="458,193,0,0" VerticalAlignment="Top" Width="99" Click="generateBtn" FontFamily="Segoe UI Light" Height="23"/>
         <Label Content="Number of Guess Left:" HorizontalAlignment="Left" Margin="151,150,0,0" VerticalAlignment="Top" Width="131" FontFamily="Segoe UI Light"/>
         <TextBox x:Name="guessleftTxt" HorizontalAlignment="Left" Height="23" Margin="282,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="31" TextChanged="TextBox_TextChanged"/>
         <Label Content="Wrong Guess:" HorizontalAlignment="Left" Margin="318,150,0,0" VerticalAlignment="Top" Width="86" FontFamily="Segoe UI Light"/>
         <TextBox x:Name="lengthTxt" HorizontalAlignment="Left" Height="23" Margin="560,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="36" TextChanged="TextBox_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="409,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="35" TextChanged="TextBox_TextChanged"/>
         <Label Content="Length of Word:" HorizontalAlignment="Left" Margin="458,150,0,0" VerticalAlignment="Top" Width="97" FontFamily="Segoe UI Light"/>
-        <TextBox x:Name="wordtxt" HorizontalAlignment="Left" Height="23" Margin="457,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox x:Name="GuessBox" HorizontalAlignment="Left" Height="23" Margin="113,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="wordtxt" HorizontalAlignment="Left" Height="23" Margin="247,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" TextChanged="TextBox_TextChanged_1"/>
         <TextBlock x:Name="WordLbl" HorizontalAlignment="Left" Margin="257,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="298" FontSize="24" FontFamily="Segoe UI Black" FontWeight="Bold" TextAlignment="Center"/>
+        <Button x:Name="Homebtn" Content="Home" HorizontalAlignment="Left" Margin="687,34,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" FontFamily="Segoe UI Light"/>
 
     </Grid>
 </Window>
