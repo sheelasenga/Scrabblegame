@@ -23,52 +23,79 @@ namespace ScrabbleGame
         public string currentword;
         private int wrongGuess = 0;
         private string copyCurrent = "";
+        private int guessCount = 0;
+        List<char> finalwords;
+        List<int> index;
+        int count = 0;
+        StringBuilder sb1 = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
 
         public Welcome()
         {
             InitializeComponent();
 
             words = System.IO.File.ReadAllLines("Words.txt");
-           
+            finalwords = new List<char>();
+            index = new List<int>();
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow sw = new MainWindow();
             sw.Show();
             this.Close();
-
         }
-
         private void generateBtn(object sender, RoutedEventArgs e)
         {
-           // string[] words = { "perfect", "country", "pumpkin", "freedom", "journey", "amazing" , "good"};
-            
             // random word generator
-           Random rnd = new Random();
+            Random rnd = new Random();
             string newword = words[rnd.Next(words.Length)];
             char[] wordChars = newword.ToCharArray();
             int len = wordChars.Length;
-           string random = new string(words.ToString().OrderBy(s => (rnd.Next(2) % 2) == 0).ToArray());
-
+            string random = new string(words.ToString().OrderBy(s => (rnd.Next(2) % 2) == 0).ToArray());
+            int rnumber = rnd.Next(0, len);
             // display the generated word in textbox
-            wordtxt.Text = words[rnd.Next(words.Length)];
-            // wordtxt.Text = words[random.Next(0,words.Count)];
-            //wordtxt.Text = random;
-           // MessageBox.Show(random);
-            lengthTxt.Text = len.ToString();
+            while (true)
+            {
+                if(!(index.Contains(rnumber)))
+                {
+                    index.Add(rnumber);
+                    finalwords.Add(wordChars[rnumber]);
+                    count++;
+                    if(count > 6)
+                    {
+                        break;
+                    }
+                }
+                rnumber = rnd.Next(0, len);
+            }
+            sb1 = new StringBuilder();
+            foreach(char ch in finalwords)
+            {
+                sb1.Append(ch.ToString());
+            }
+                
+            wordtxt.Text = sb1.ToString();
 
-            //hide the generated word using _
+            string real_words = words[rnd.Next(words.Length)];
+
+            //string rand_num = rnd.Next(0,words.Length);
+            //wordtxt.Text = random;
+            // MessageBox.Show(random);
+            lengthTxt.Text = len.ToString();
+            //guessleftTxt.Text = guessCount.ToString();
+            //guessleftTxt.Text = " ";
+            ////hide the generated word using _
             for (int i = 0; i < wordChars.Length; i++)
             {
-              WordLbl.Text += ("_ ");
+                WordLbl.Text += ("_ ");
             }
+            wordbtn.IsEnabled = false;
+
+          
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //   string[] words = { "perfect", "country", "pumpkin", "freedom", "journey", "amazing", "good" };
-            //Random rnd = new Random();
-            //string newword = words[rnd.Next(words.Length)];
-            
         }
 
         private void Wordchoice()
@@ -80,21 +107,42 @@ namespace ScrabbleGame
             for (int index = 0; index < currentword.Length; index++)
             {
                 copyCurrent += "_";
+                guessCount--;
             }
             displayword();
         }
+        
+
         private void displayword()
         {
-           
+
             for (int index = 0; index < currentword.Length; index++)
             {
                 WordLbl.Text += copyCurrent.Substring(index, 1);
                 WordLbl.Text += " ";
-                
+
             }
         }
-        private void GuessClick(object sender, RoutedEventArgs e)
+        private void GuessClick(object sender, EventArgs e)
         {
+            Button b = (Button)sender;
+           char charClicked = b.Content.ToString()[0];
+            b.IsEnabled = false;
+           
+
+            //if (currentword.Contains(choice.Text))
+            //   {
+            //  char[] temp = copyCurrent.ToCharArray();
+            //  char[] find = currentword.ToCharArray();
+            // char guessChar = wordbtn.Content.ElementAt(0);
+            // for (int index = 0; index < find.Length; index++)
+            //  {
+            //   if (find[index] == guessChar)
+            //    {
+            //      temp[index] = guessChar;
+            //  }
+            //   }
+
             wrongGuess++;
             if (wrongGuess > 7)
             {
@@ -102,27 +150,20 @@ namespace ScrabbleGame
             }
             else
             {
-                // MessageBox.Show("You won!");
+                //    // MessageBox.Show("You won!");
             }
-
-            Button choice = sender as Button;
-
-            if (currentword.Equals(choice.Content))
-            {
-                char[] temp = copyCurrent.ToCharArray();
-                char[] find = currentword.ToCharArray();
-            }
-
 
 
         }
 
-        private void Bbtn_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }
     }
-    }
+}
+
+    
 
 
 
