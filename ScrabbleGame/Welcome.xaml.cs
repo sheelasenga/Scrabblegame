@@ -25,18 +25,20 @@ namespace ScrabbleGame
         private int wrongGuess = 0;
        // private string copyCurrent = "";
         
-       // private int guessCount = 0;
+        private int guessCount = 0;
         List<char> finalwords;
         List<int> index;
         int count = 0;
-        int hasWord = 0;
+       
         StringBuilder sb1 = new StringBuilder();
         StringBuilder sb2 = new StringBuilder();
+     
 
         public Welcome()
         {
             InitializeComponent();
 
+            // read words from text file
             words = System.IO.File.ReadAllLines("Words.txt");
             finalwords = new List<char>();
             index = new List<int>();
@@ -55,8 +57,9 @@ namespace ScrabbleGame
             string newword = words[rnd.Next(words.Length)];
             char[] wordChars = newword.ToCharArray();
             int len = wordChars.Length;
-            // string random = new string(words.ToString().OrderBy(s => (rnd.Next(2) % 2) == 0).ToArray());
+            
             int rnumber = rnd.Next(0, len);
+
             // display the generated scrabbled word in textbox
             while (true)
             {
@@ -97,7 +100,6 @@ namespace ScrabbleGame
         {
         }
 
-    
         private void GuessClick(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -126,7 +128,7 @@ namespace ScrabbleGame
                 if (finalwords[i] == charClicked)
                 {
 
-                    MessageBox.Show("Correct letter at index " + i);
+                   // MessageBox.Show("Correct letter at index " + i);
                     correctCharArray[i] = charClicked;
                 }
             }
@@ -139,7 +141,6 @@ namespace ScrabbleGame
          wrongGuess++;
 
         }
-           
             if (wrongGuess == 8)
             {
                 MessageBox.Show("wrong guess, You lost");
@@ -151,7 +152,6 @@ namespace ScrabbleGame
             else
             {
              if (words.Equals(finalwords))
-              
               
                 {
                     MessageBox.Show("You Win!");
@@ -167,7 +167,7 @@ namespace ScrabbleGame
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-      
+            // close the game window
             sw.Show();
             this.Close();
         }
